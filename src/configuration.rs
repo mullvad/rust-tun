@@ -62,6 +62,9 @@ pub struct Configuration {
     pub(crate) metric: Option<u16>,
     #[cfg(unix)]
     pub(crate) close_fd_on_drop: Option<bool>,
+    /// Add route for utun interface automatically
+    #[cfg(target_os = "macos")]
+    pub auto_configure: bool,
 }
 
 impl Configuration {
