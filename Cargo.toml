@@ -16,7 +16,7 @@ bytes = { version = "1" }
 cfg-if = "1"
 futures-core = { version = "0.3", optional = true }
 libc = { version = "0.2", features = ["extra_traits"] }
-log = "0.4"
+log = "0.4.22"
 thiserror = "2"
 tokio = { version = "1", features = [
     "net",
@@ -46,7 +46,7 @@ wintun-bindings = { version = "^0.7.7", features = [
 ] }
 
 [target.'cfg(any(target_os = "macos", target_os = "freebsd"))'.dependencies]
-ipnet = "2"
+ipnet = "2.6.0"
 
 [dev-dependencies]
 ctrlc2 = { version = "3", features = ["tokio", "termination"] }
