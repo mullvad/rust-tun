@@ -206,6 +206,7 @@ impl AbstractDevice for Device {
 
     fn mtu(&self) -> Result<u16> {
         let mtu = self.tun.session.get_adapter().get_mtu()?;
+        log::debug!("!!! MTU: {mtu}");
         Ok(mtu as u16)
     }
 
